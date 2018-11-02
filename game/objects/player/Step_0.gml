@@ -6,8 +6,11 @@ for (var i = 0; i < maxpads; i++)
 		gamepad_set_axis_deadzone(i, 0.1);
 		hdir = gamepad_axis_value(i, gp_axislh);
 		vdir = gamepad_axis_value(i, gp_axislv);
+		pause = gamepad_button_check(i, gp_start);
     }
 }
+
+if(pause){room_goto(pauseMenu);}
 
 spdx = hdir * maxspd;
 spdy = vdir * maxspd;
