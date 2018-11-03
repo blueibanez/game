@@ -1,6 +1,2 @@
-if(MenuManager.itemList[MenuManager.selectedItem] == id){
-	sprite_index = sprite3;
-}
-else{
-	sprite_index = sprite1;
-}
+x = MenuManager.menuPositions[menuPosition,0]+menu.x;
+y = MenuManager.menuPositions[menuPosition,1]+menu.y;

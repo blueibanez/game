@@ -9,6 +9,8 @@ for (var i = 0; i < maxpads; i++)
 		pause = gamepad_button_check(i, gp_start);
     }
 }
+
+//move cursor
 if(hdir > 0 && selectedItem < array_length_1d(itemList)-1){
 	if(!moving){
 		selectedItem++;
@@ -34,4 +36,9 @@ else if(hdir < 0 && selectedItem > 0){
 else if(hdir==0){
 	moving = false;
 	timer = -10;
+}
+
+//reset cursor after unpausing
+if(GameStateManager.state == PLAY){
+	selectedItem = 0;
 }
